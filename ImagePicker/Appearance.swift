@@ -6,7 +6,7 @@
 //  Copyright © 2017 Inloop. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 ///
 /// Provides access to styling attributes of Image Picker.

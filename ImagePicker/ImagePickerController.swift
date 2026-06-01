@@ -310,7 +310,7 @@ open class ImagePickerController : UIViewController {
     // MARK: View Lifecycle
 
     open override func loadView() {
-        let nib = UINib(nibName: "ImagePickerView", bundle: Bundle(for: ImagePickerView.self))
+        let nib = UINib(nibName: "ImagePickerView", bundle: .module)
         view = nib.instantiate(withOwner: nil, options: nil)[0] as! ImagePickerView
     }
 

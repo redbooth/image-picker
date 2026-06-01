@@ -6,7 +6,7 @@
 //  Copyright © 2017 Inloop. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Photos
 
 ///
@@ -92,10 +92,10 @@ class VideoAssetCell : AssetCell {
         case .image:
             if asset.mediaSubtypes.contains(.photoLive) {
                 gradientView.isHidden = false
-                gradientView.image = UIImage(named: "gradient", in: Bundle(for: type(of: self)), compatibleWith: nil)?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
+                gradientView.image = UIImage(named: "gradient", in: .module, compatibleWith: nil)?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
                 iconView.isHidden = false
                 durationLabel.isHidden = true
-                iconView.image = UIImage(named: "icon-badge-livephoto", in: Bundle(for: type(of: self)), compatibleWith: nil)
+                iconView.image = UIImage(named: "icon-badge-livephoto", in: .module, compatibleWith: nil)
             }
             else {
                 gradientView.isHidden = true
@@ -104,10 +104,10 @@ class VideoAssetCell : AssetCell {
             }
         case .video:
             gradientView.isHidden = false
-            gradientView.image = UIImage(named: "gradient", in: Bundle(for: type(of: self)), compatibleWith: nil)?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
+            gradientView.image = UIImage(named: "gradient", in: .module, compatibleWith: nil)?.resizableImage(withCapInsets: .zero, resizingMode: .stretch)
             iconView.isHidden = false
             durationLabel.isHidden = false
-            iconView.image = UIImage(named: "icon-badge-video", in: Bundle(for: type(of: self)), compatibleWith: nil)
+            iconView.image = UIImage(named: "icon-badge-video", in: .module, compatibleWith: nil)
             durationLabel.text = VideoAssetCell.durationFormatter.string(from: asset.duration)
         default: break
         }
@@ -132,8 +132,8 @@ class AssetCell : UICollectionViewCell, ImagePickerAssetCell {
         didSet {
             selectedImageView.isHidden = !isSelected
             if selectedImageView.isHidden == false {
-                selectedImageView.image = UIImage(named: "icon-check-background", in: Bundle(for: type(of: self)), compatibleWith: nil)
-                selectedImageView.foregroundImage = UIImage(named: "icon-check", in: Bundle(for: type(of: self)), compatibleWith: nil)
+                selectedImageView.image = UIImage(named: "icon-check-background", in: .module, compatibleWith: nil)
+                selectedImageView.foregroundImage = UIImage(named: "icon-check", in: .module, compatibleWith: nil)
             }
         }
     }

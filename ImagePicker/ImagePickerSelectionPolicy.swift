@@ -6,7 +6,7 @@
 //  Copyright © 2017 Inloop. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 ///
 /// Helper class that determines which cells are selected, multiple selected or

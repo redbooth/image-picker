@@ -6,7 +6,7 @@
 //  Copyright © 2017 Inloop. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Informs a delegate what is going on in ImagePickerDelegate
 protocol ImagePickerDelegateDelegate : class {

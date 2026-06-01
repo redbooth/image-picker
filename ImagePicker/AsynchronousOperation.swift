@@ -6,7 +6,7 @@
 //  Copyright © 2018 Inloop. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 ///
 /// Provides primitives for wrapping Operation with asynchronous code that can

@@ -196,7 +196,7 @@ extension UICollectionView {
             guard let identifier = registrator.cellIdentifier(forActionItemAt: Int.max) else {
                 fatalError("Image Picker: unable to register default action item cell")
             }
-            let nib = UINib(nibName: "ActionCell", bundle: Bundle(for: ActionCell.self))
+            let nib = UINib(nibName: "ActionCell", bundle: .module)
             register(nib, forCellWithReuseIdentifier: identifier)
         }
         else {
@@ -211,11 +211,11 @@ extension UICollectionView {
             //if user does not set any class or nib we have to register default cell `CameraCollectionViewCell` based on camera mode
             switch cameraMode {
             case .photo, .photoAndLivePhoto:
-                let nib = UINib(nibName: "LivePhotoCameraCell", bundle: Bundle(for: LivePhotoCameraCell.self))
+                let nib = UINib(nibName: "LivePhotoCameraCell", bundle: .module)
                 register(nib, forCellWithReuseIdentifier: registrator.cellIdentifierForCameraItem)
 
             case .photoAndVideo:
-                let nib = UINib(nibName: "VideoCameraCell", bundle: Bundle(for: VideoCameraCell.self))
+                let nib = UINib(nibName: "VideoCameraCell", bundle: .module)
                 register(nib, forCellWithReuseIdentifier: registrator.cellIdentifierForCameraItem)
             }
 
